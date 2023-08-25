@@ -1,0 +1,57 @@
+<div class="white-box-content">
+    <div class="logo-container">
+        <img src="/assets/images/goBravoLogo.png" alt="Logo go Bravo">
+    </div>
+    <div class="meanPB-whiteBox-title mb-4">Ingresa al portal</div>
+    <div class="mb-4 text-center">Si eres aliado Resuelve ingresa tus credenciales</div>
+
+    <form [formGroup]="formlogin" (ngSubmit)="login()" class="w-100 d-flex flex-column align-items-center">
+
+        <mat-form-field class="w-100 mb-2" appearance="fill" color="accent">
+            <mat-label color="primary">Usuario</mat-label>
+            <input type="email" matInput formControlName="email" placeholder="Ej. john@ejemplo.com">
+            <mat-error class="text-center" *ngIf="this.formlogin.controls.email.hasError('required')">
+                Email es <strong>requerido</strong>
+            </mat-error>
+            <mat-error class="text-center" *ngIf="this.formlogin.controls.email.hasError('email')">
+                Email <strong>no valido</strong>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="w-100 mb-2" appearance="fill" color="accent">
+            <mat-label>Contraseña</mat-label>
+            <input [type]="hide ? 'password' : 'text'" matInput formControlName="password" formControlName="password"
+                placeholder="Digite su contraseña">
+            <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error class="text-center">
+                La contraseña es <strong> requerida </strong>
+            </mat-error>
+        </mat-form-field>
+        <mat-error *ngIf="errorVal"> {{errorText}}</mat-error>
+        <div class="mb-3 forgot-password-label-custom" (click)="openPasswordResetDialog()">¿Olvidaste tu contraseña?</div>
+        <button type="submit" class="mean-PortalBtn sendFormbtn w-75" [disabled]="!this.formlogin.valid">
+            Iniciar sesión
+        </button>
+    </form>
+
+    <div class="mb-3 aun" >¿Aun no eres aliado de Bravo? <a (click)="openUserNotRegisterDialog()" class="smallBlueTxt click">Click aquí</a></div>
+    <!-- <div><a routerLink="/pb/home" class="smallBlueTxt mt-0">Volver al inicio</a></div> -->
+    <div>
+        <a class="smallBlueTxt btn btn-outline-info p-3 px-5 rounded-pill" routerLink="/pb/home">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <g clip-path="url(#clip0_774_398)">
+                    <path d="M9 19L10.41 17.59L5.83 13H22V11H5.83L10.42 6.41L9 5L2 12L9 19Z" fill="currentColor"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_774_398">
+                        <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            <span class="button-text">Volver al inicio</span>
+        </a>
+    </div>
+
+</div>

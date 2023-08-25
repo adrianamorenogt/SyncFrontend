@@ -1,0 +1,21 @@
+<div class="overlay-PageLoader" *ngIf="isloading$ | async">
+
+    <div class="overlay-PageLoader">
+        <div class="infoLoader">
+            <img src="/assets/images/Loader1.png" alt="Cargando..." class="img-PageLoader">
+
+            <!-- https://material.angular.io/components/progress-spinner/examples#progress-spinner-overview -->
+
+            <div class="tag-PageLoader">
+                <div class="firstTxt-pageLoader">
+                    Perfecto  <span class="one">.</span><span class="two">.</span><span class="three">.</span>
+                </div>
+                    <!-- <span class="user-name">{{this.cookieService.get("UserName")}}</span> -->
+                <div class="secondTxt-pageLoader">
+                    Esto puede tardar un poco, por favor espera.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

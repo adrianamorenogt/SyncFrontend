@@ -1,0 +1,94 @@
+@import 'variables';
+.int-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 80px 16px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    max-width: 1300px;
+    .bg-intContainer{
+        background-color: rgba(255,255,255, .5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        -webkit-box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow:    4px 4px 30px 0px rgba(0, 0, 0, 0.15);
+        box-shadow:         4px 4px 30px 0px rgba(0, 0, 0, 0.15);
+        .header-intContainer{
+            height: 90px;
+            padding: 10px 1rem;
+            .logo-intContainer{
+                max-width: 170px;
+            }
+            .exitPB-btn{
+                border: none;
+                outline: none;
+                background-color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .mat-icon{
+                    color: $first-color;
+                    font-size: 30px;
+                }
+                .safePB-exitTXT{
+                    margin-right: 15px;
+                }
+                @media (max-height: 575.98px){
+                    .safePB-exitTXT{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .components-intContainer{
+            background-color: #fff;
+            position: absolute;
+            border-radius: 10px;
+            width: 100%;
+            bottom: 0;
+            top:90px;
+            padding: 1rem;
+            -webkit-box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow:    4px 4px 30px 0px rgba(0, 0, 0, 0.15);
+            box-shadow:         4px 4px 30px 0px rgba(0, 0, 0, 0.15);
+            .infoScroll-intContainer{
+                max-height: 100%;
+                overflow-y: auto;
+            }
+            .sc-infoUser{
+                background-color: $light-blue;
+                padding: 2.4rem 1rem;
+                width: 240px;
+                border-radius: 10px;
+                text-align: center;
+                color: $first-color;
+                .user-img{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    overflow:hidden;
+                    margin: 0 auto 1.4rem;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .welcome{
+                    font-weight: bold;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                    color: welcome;
+                }
+                .user-name{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

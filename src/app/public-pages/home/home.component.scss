@@ -1,0 +1,99 @@
+@import 'variables';
+
+.rtd-link {
+    margin-top: 6%;
+    text-decoration: none;
+}
+
+.white-box-content .meanPB-whiteBox-title {
+    color: #111233;
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    // margin-top: 50px;
+}
+
+.bluePB-container {
+    max-height: 150px;
+    width: 100%;
+    // background-color: $first-color-v2;
+    border-radius: 5px;
+    border-radius: 8px;
+    background: var(--panel-purple-200, #D7D0F6);
+    color: #111233;
+    padding: 10px;
+    outline: none;
+    border: none;
+    text-align: start;
+    box-shadow: 8px 8px 0px 2px rgba(#EBE8FB, 1.0);
+    -moz-box-shadow: 8px 8px 0px 2px rgba(#EBE8FB, 1.0);
+    -webkit-box-shadow: 8px 8px 0px 2px rgba(#EBE8FB, 1.0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    .bluePB-title {
+        color: var(--panel-deep-purple-600, #111233);
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        @media (max-width: 575.98px) {
+            font-size: 14px;
+        }
+    }
+
+    .bluePB-subTitle {
+        color: var(--panel-deep-purple-600, #111233);
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        @media (max-width: 575.98px) {
+            font-size: 14px;
+        }
+    }
+
+    .rtd-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #4BC9F4 !important;
+
+    }
+
+    .mat-icon {
+        color: #111233;
+        height: 100%;
+        width: 100%;
+        font-size: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 575.98px) {
+            font-size: 40px;
+        }
+    }
+
+    mb-2 mb-md-4 {
+        color: #585866;
+    }
+}
+
+
+.white-box-content .mb-2.mb-md-4 {
+    color: var(--panel-grey-300, #585866);
+    text-align: center;
+    font-family: inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

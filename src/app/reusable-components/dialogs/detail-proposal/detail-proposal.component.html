@@ -1,0 +1,101 @@
+<div mat-dialog-title>
+    <h2 class="dp-dialogTitle">
+        Propuesta
+        <small>No. 0001</small>
+    </h2>
+</div>
+<div mat-dialog-content class="mat-typography">
+    <mat-tab-group color="accent" animationDuration="0ms" class="dp-tabs">
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon">info</mat-icon>
+            </ng-template>
+          
+            <section class="dp-tabsContent">
+                    <ul class="dp-basicInfo">
+                        <li>
+                            <span class="titleOfData">Presentada por:</span>
+                            <span class="answerOfData">{{sendBy}}</span>
+                        </li>
+                        <li>
+                            <span class="titleOfData">Referencia:</span>
+                            <span class="answerOfData">{{reference}}</span>
+                        </li>
+                        <li>
+                            <span class="titleOfData">Monto:</span>
+                            <span class="answerOfData">{{amount | currency}}</span>
+                        </li>
+                        <li>
+                            <span class="titleOfData">Tipo</span>
+                            <span class="answerOfData">{{type}}</span>
+                        </li>
+                        <li>
+                            <span class="titleOfData">Fecha de presentación:</span>
+                            <span class="answerOfData">{{date | date: 'medium'}}</span>
+                        </li>
+                        <li>
+                            <span class="titleOfData">Agencia:</span>
+                            <span class="answerOfData">{{bank}}</span>
+                        </li>
+                    </ul>
+            </section>
+        </mat-tab>
+      
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon">description</mat-icon>
+            </ng-template>
+
+            <section class="dp-tabsContent">
+                <div class="dp-descSection">
+                    <p>
+                        Descripción:
+                    </p>
+                    <div class="dp-descSection-box">
+                        {{description}}
+                    </div>
+                </div>
+            </section>
+        
+        </mat-tab>
+      
+        <mat-tab *ngIf="attached">
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">attach_file</mat-icon>
+          </ng-template>
+      
+          <section class="dp-tabsContent">
+            <div class="dp-attachSection">
+                <p>
+                    Adjuntos:
+                </p>
+                <div class="dp-attachItems">
+                    <div class="dp-attachItem">
+                        <div class="container">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-auto me-3">
+                                    <mat-icon class="attachIcon">file_present</mat-icon>
+                                </div>
+                                <div class="col">
+                                    <span class="attachName">
+                                        {{documentName}}
+                                    </span>
+                                    <span class="attachDesc">
+                                        
+                                    </span>
+                                </div>
+                                <div class="col-auto ms-3">
+                                    <button mat-icon-button color="accent" (click)=" getfile()"><mat-icon>download</mat-icon></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </section>
+        </mat-tab>
+    </mat-tab-group>
+</div>
+<div mat-dialog-actions align="center">
+    <button mat-button mat-dialog-close color="accent">Cerrar</button>
+</div>

@@ -1,0 +1,256 @@
+@import 'variables';
+
+body{
+    height: 100vh;
+    min-width: 100%;
+    background: linear-gradient(270deg, #464091 0%, #312A76 36.39%, #221A54 64.06%, #141037 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    // background-color: $first-color;
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+
+.container-v{
+    height: 100vh;
+    min-width: 100%;
+    margin-left: 2.5rem;
+    background-image: url("/assets/images/UnionV.svg");
+    background-size: 5rem;
+}
+/* .container-cstm {
+    height: 100vh;
+    min-width: 100%;
+    background-image: url(test.svg);
+    background-size: 5rem;
+} */
+.meanPB-whiteBox-container{
+    
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+   
+    @media(max-height: 720px){
+        padding: 10px 0px;
+    }
+    @media (min-height: 720px){
+        padding: 50px 0px;
+    }
+    @media (min-height: 1080px){
+        padding: 100px 0px;
+    }
+    .meanPB-whiteBox{
+        position: relative;
+        background-color: #ffffff;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        overflow: scroll;
+        height: 100%;
+        max-height: 1080px;
+        width: 100%;
+        box-shadow: 0px 0px 12px 2px rgba(#000000,  0.1);
+        -moz-box-shadow: 0px 0px 12px 2px rgba(#000000,  0.1);
+        -webkit-box-shadow: 0px 0px 12px 2px rgba(#000000,  0.1);
+        @media (max-width: 575.98px) { 
+            padding: 10px;
+        }
+        @media (max-width: 1199.98px){
+            width: 100%;
+        }
+        .exitPB-btn{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            align-self: flex-end;
+            height: 5%;
+            .mat-icon{
+                color: $first-color;
+                font-size: 30px;
+            }
+            // .safePB-exitTXT{
+            //     margin-right: 15px;
+            // }
+            // @media (max-height: 575.98px){
+            //     .safePB-exitTXT{
+            //         display: none;
+            //     }
+            // }
+
+        }
+    }
+
+    .meanPB-whiteBox::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 10px;
+    }
+    
+    .meanPB-whiteBox::-webkit-scrollbar-thumb {
+        border-radius: 15px;
+        background-color: grey;
+    }
+}
+
+.meanPB-titleText{
+    padding: 100px 0px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100vh;
+    @media(max-height: 720px){
+        padding: 10px 0px;
+    }
+    @media (min-height: 720px){
+        padding: 50px 0px;
+    }
+    @media (min-height: 1080px){
+        padding: 100px 0px;
+    }
+    .blueHTitle{
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 40px;
+        @media (max-width: 1199.98px){
+            font-size: 33px;
+        }
+    }
+    .changeLifes-title{
+        border-radius: 8px;
+        background: var(--panel-gradient-sea, linear-gradient(90deg, #71F3F8 0%, #509EF9 65.10%, #71F3F8 100%));        width: fit-content;
+        color: var(--panel-base-white, #FFF);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 49px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 462px;
+        height: 64px;
+        flex-shrink: 0;
+        background: linear-gradient(90deg, #71F3F8 0%, #509EF9 20%, #AA78DE 40%, #9867C7 60%, #71F3F8 80%, #509EF9 100%);
+        background-size: 600%;
+        animation: anime 10s linear infinite;
+        transition: font-size 0.5s, background-color 0.3s;
+        text-align: center;
+        @media (max-width: 1199.98px){
+            width: 250px;
+            font-size: 28px;
+        }
+    }
+    .findHappyP-text{
+        position: relative;
+        color: #ffffff;
+        display: inline-block;
+        padding-bottom: 12px;
+        font-size: 28px;
+        @media (max-width: 1199.98px){
+            font-size: 16px;
+        }
+        &::after{
+            content: '';
+            background: var(--panel-gradient-sea-hover, linear-gradient(90deg, #42c4f3 0%, #328df5 20%, #1FAEE0 40%, #033063 60%, #5dc2e7 80%, #f9fafc86 100%));
+            background-size: 600%;
+            animation: anime 10s linear infinite;
+            transition: font-size 0.5s, background-color 0.3s;
+            text-align: center;
+            width: 274px;
+            height: 8px;
+            flex-shrink: 0;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+    }
+}
+/* Estilos generales para .logo-V */
+.logo-V {
+    position: absolute;
+    top: 64px;
+    left: 64px;
+    width: 56px;
+    height: 145px;
+    flex-shrink: 0;
+    margin-right: 1200px;
+}
+
+/* Consulta de medios para dispositivos con ancho máximo de 768px (por ejemplo, tablets y móviles) */
+@media (max-width: 989px) {
+    .logo-V {
+        display: none; /* Oculta el elemento en dispositivos pequeños */
+    }
+}
+
+.principalContainer{
+    width: 80%;
+    height: 95%;
+}
+
+::ng-deep .mat-checkbox-label {
+    text-align: justify; /* Alinea el texto a la izquierda */
+    align-items: flex-start !important;
+    border-color: #509EF9 !important;
+
+  }
+  
+  ::ng-deep .mat-checkbox-label a {
+    // text-align: justify;
+    text-decoration: none;
+  }
+  
+
+/* Estilos para el botón "Cerrar Sesión" */
+.exitPB-btn {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    color: #4BC9F4;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+.exitPB-btn .exit-icon {
+    margin-left: auto;
+    transition: transform 0.3s ease, fill 0.3s ease, color 0.3s ease;
+    fill: #4BC9F4;
+    width: 24px;
+    height: 24px;
+    color: #4BC9F4;
+}
+
+/* Efecto hover */
+.exitPB-btn:hover {
+    background-color: #4BC9F4;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+    text-decoration: none;
+    fill: #4BC9F4; 
+    color: #4BC9F4;
+}
+
+.exitPB-btn:hover .exit-icon {
+    transform: scale(1.2);
+    fill: #4BC9F4; 
+    color: #4BC9F4;
+}

@@ -1,0 +1,37 @@
+<div class="int-container">
+    <div class="bg-intContainer">
+        <div class="header-intContainer">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-auto">
+                    <img src="/assets/images/goBravoLogo.png" alt="Resulve tu deuda" class="logo-intContainer">
+                </div>
+                <div class="col-auto">
+                    <button class="exitPB-btn" (click)="onLogout()">
+                        <span class="safePB-exitTXT">Salida segura</span> 
+                        <mat-icon>exit_to_app</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="components-intContainer">
+            <div class="row h-100 g-0">
+                <div class="col-12 col-md-auto cnt-sc-infoUser">
+                    <div class="sc-infoUser">
+                        <div class="user-img">
+                            <img src="/assets/images/df-imgUser.png">
+                        </div>
+                        <div class="welcome">
+                            Hola
+                        </div>
+                        <div class="user-name">
+                            {{userName}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md ps-4 infoScroll-intContainer">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,108 @@
+@import 'variables';
+.dp-dialogTitle{
+    color: $first-color;
+    margin-bottom: 0;
+    small{
+        display: block;
+        font-size: .8em;
+        opacity: .6;
+    }
+}
+.dp-tabs{
+    ::ng-deep{
+        .mat-tab-header{
+            .mat-tab-labels{
+                .mat-tab-label{
+                    min-width: 76px;
+                }
+                .mat-tab-label-active{
+                    .mat-tab-label-content{
+                        color: $first-color;
+                    }
+                }
+            }
+        }
+    }
+    .dp-tabsContent{
+        padding: 2rem 0 1rem;
+        .dp-basicInfo{
+            font-size: 1rem;
+            list-style: none;
+            padding-left:0;
+            margin-bottom: 0;
+            li{
+                margin-bottom: 1rem;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .titleOfData,
+                .answerOfData{
+                    display: block;
+                }
+                .titleOfData{
+                    font-size: .8em;
+                }  
+                .answerOfData{
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .dp-descSection{
+            .dp-descSection-box {
+                border: 1px solid rgba(0,0,0,.2);
+                border-radius: 10px;
+                padding: 1.4rem 1rem;
+                max-height: 220px;
+                overflow-y: auto;
+                &::-webkit-scrollbar {
+                    width: 8px;
+                }
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: #f1f1f1;
+                    border-radius: 10px;
+                }
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: rgba(0,0,0,.25);
+                    border-radius: 10px;
+                }
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: rgba(0,0,0,.4);
+                }
+            }
+        }
+        .dp-attachSection{
+            .dp-attachItems{
+                .dp-attachItem{
+                    border:1px solid rgba(0,0,0,.2);
+                    border-radius: 10px;
+                    padding: 1rem 0;
+                    margin-bottom: 1rem;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    .attachIcon{
+                        font-size: 34px;
+                        width: 34px;
+                        height: 34px;
+                        color: rgba(0,0,0,.6);
+                    }
+                    .attachName,
+                    .attachDesc{
+                        display: block;
+                    }
+                    .attachName{
+                        word-break: break-all;
+                    }
+                    .attachDesc{
+                        color: rgba(0,0,0,.6);
+                        font-size:.85em;
+                    }
+                }
+            }
+        }
+    }
+}

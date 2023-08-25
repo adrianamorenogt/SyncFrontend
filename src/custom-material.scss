@@ -1,0 +1,26 @@
+@use '~@angular/material' as mat;
+@import '~@angular/material/theming';
+@import 'src/style-paths/material-palette.scss';
+
+
+@include mat.core();
+@include mat.strong-focus-indicators();
+
+@include mat.core();
+@include mat.strong-focus-indicators();
+
+// Define los colores purple y deeppurple en tu paleta personalizada
+$my-purple: mat-palette($mat-purple);
+$my-deeppurple: mat-palette($mat-deep-purple);
+
+$my-primary: mat-palette($my-purple, 500);
+$my-accent: mat-palette($my-deeppurple, 500);
+
+$my-theme: mat-light-theme((
+  color: (
+    primary: $my-primary,
+    accent: $my-accent,
+  )
+));
+
+@include angular-material-theme($my-theme);

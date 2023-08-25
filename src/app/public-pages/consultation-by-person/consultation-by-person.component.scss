@@ -1,0 +1,185 @@
+
+// .sendFormbtn:disabled{
+//   background-color: #cccccc;
+//   color: #ffffff;
+//   font-family: Monserrat;
+// }
+
+.checkbox-field{
+  margin-top: 5%;
+  width: 100%;
+  height: auto;
+}
+
+.font-size-text{
+  width: 100%;
+  word-wrap: break-word;
+  font-size: calc(1vw+50%);
+}
+
+
+.white-box-content form button[type="submit"] {
+  /* Estilos del botón */
+  display: flex;
+  width: 100%;
+  max-width: 432px;
+  height: 48px;
+  padding: 12px 16px 11px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 24px;
+  border: 1px solid var(--panel-action-blue-500, #4BC9F4);
+  background: var(--panel-action-blue-500, #4BC9F4);
+  color: var(--panel-base-white, #FFF);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  /* Transiciones */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.white-box-content form button[type="submit"]:hover {
+  /* Estilos del botón al pasar el cursor sobre él */
+  background: var(--panel-gradient-sea, linear-gradient(90deg, #71F3F8 0%, #509EF9 65.10%, #71F3F8 100%));
+  color: var(--panel-base-white, #FFF);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+
+  .mean-PortalBtn {
+      max-width: none; /* Elimina el ancho máximo para que el botón ocupe todo el ancho disponible */
+      width: auto; /* Elimina el ancho fijo para que el botón se ajuste al contenido */
+      height: auto; /* Elimina la altura fija para que el botón se ajuste al contenido */
+      padding: 12px 24px; /* Ajusta el relleno horizontal para que haya más espacio alrededor del texto */
+      font-size: 14px;
+      margin-left: auto; /* Centra el elemento horizontalmente */
+      margin-right: auto; /* Centra el elemento horizontalmente */
+      margin-top: 20px; /* Añade un margen superior para separar los elementos */
+      margin-bottom: 40px; /* Añade un margen inferior para separar los elementos */
+  }
+}
+
+.meanPB-whiteBox-title.mb-3 {
+  color: #111233;
+  text-align: center;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.mb-3.text-center {
+  color: #585866;
+  text-align: center;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+::ng-deep .mat-form-field-flex {
+  border-radius: 8px !important;
+}
+
+
+// AZUL GRADIENTE BOTON AZUL ESTATICO
+
+
+.mean-PortalBtn.sendFormbtn {
+    display: flex;
+    width: 100%;
+    max-width: 432px;
+    height: 48px;
+    padding: 12px 16px 11px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 24px;
+    border: 1px solid var(--panel-action-blue-500, #4BC9F4);
+    background: var(--panel-action-blue-500, #4BC9F4);
+    color: var(--panel-base-white, #FFF);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    /* Transiciones */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mean-PortalBtn.sendFormbtn:hover {
+    background: var(--panel-gradient-sea, linear-gradient(90deg, #71F3F8 0%, #509EF9 65.10%, #71F3F8 100%));
+    color: var(--panel-base-white, #FFF);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+    .mean-PortalBtn.sendFormbtn {
+        max-width: none;
+        width: auto;
+        height: auto;
+        padding: 12px 24px;
+        font-size: 14px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+// VOLVER AL INICIO BOTÓN
+
+.white-box-content a.btn.btn-outline-info {
+  color: var(--panel-action-blue-500, #4BC9F4);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  padding: 0 10px;
+  border-radius: 24px;
+  border: 1px solid var(--panel-action-blue-500, #4BC9F4);
+}
+
+.white-box-content a.btn.btn-outline-info svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  fill: var(--panel-action-blue-500, #4BC9F4);
+  transition: fill 0.3s ease;
+}
+
+/* Efecto hover */
+.white-box-content a.btn.btn-outline-info:hover {
+  color: #ffffff !important;
+  background: var(--panel-gradient-sea, linear-gradient(90deg, #71F3F8 0%, #509EF9 65.10%, #71F3F8 100%));
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+  border: none;
+}
+
+.white-box-content a.btn.btn-outline-info:hover .button-text {
+  color: #ffffff !important;
+}
+
+.white-box-content a.btn.btn-outline-info:hover svg path {
+  fill: var(--panel-base-white, #FFF);
+}

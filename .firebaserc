@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "rtd-search": {
+      "hosting": {
+        "solve-your-debt": [
+          "rtd-search"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "rtd-search"
+  }
+}

@@ -1,0 +1,49 @@
+<div class="white-box-content">
+    <button id="close" class="close-dialog-btn" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+    <span class="meanPB-whiteBox-title mb-1">Explicación propuesta multiple</span>
+    <div class="mb-1 w-75">Para hacer una propuesta multiple debes subir un archivo de formato CSV donde cada elemento se separe usando comas (","), dicho archivo debe seguir las siguientes especificaciones.</div>
+    <div class="w-75 d-flex flex-column mt-3">
+        <div class="w-100">
+            <strong class="text-center">Campos requeridos:</strong>
+            <ol class="mt-2">
+                <li class="mb-1">
+                    <i>Tipo y numero de Documento:</i> Numero de documento del cliente al cual se le esta haciendo la propuesta de negociación
+                </li>
+                <li class="mb-1">
+                    <i>Agencia o entidad financiera:</i> Entidad o agencia de cobranza con la cual el cliente tiene la deuda.
+                </li>
+                <li class="mb-1">
+                    <i>Monto:</i> Monto por el cual se planea negociar la deuda del cliente.
+                </li>
+                <li class="mb-1">
+                    <i>Descripción:</i> Detalle de la propuesta, en este campo se puede especificar la forma en que se va a negociar la deuda del cliente.
+                </li>
+                <li class="mb-1">
+                    <i>Referencia:</i> La referencia asociada a la deuda, en caso de conocerse.
+                </li>
+            </ol>
+        </div>
+        <div class="w-100 ml-1">
+            <strong class="text-center">Ejemplos:</strong>
+            <ul class="mt-2">
+                <li class="mb-1">
+                    <i class="field-title">Propuesta dentro del CSV:</i> 
+                    <br>
+                    <span class="field-text">CC12345,BANCOLOMBIA,1000000,Se propone que la deuda sea negociada por un 50% de su valor en un plazo de 5 meses,245</span>
+                </li>
+        
+                <li class="mb-1">
+                    <i class="field-title">Ejemplo archivo CSV con varias propuestas:</i> 
+                    <br>
+                    <!-- <img class="w-100 mt-4 rounded" src="/assets/images/multiple-proposal-csv-example.png" alt="Logo resulve tu deuda"> -->
+                    <img class="w-100 mt-4 rounded" src="/assets/images/propuesta.png" alt="Img">
+
+                </li>
+            </ul>
+        </div>
+        
+        
+    </div>
+</div>

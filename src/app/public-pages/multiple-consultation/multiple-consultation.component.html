@@ -1,0 +1,54 @@
+<div class="white-box-content">
+  <div class="logo-container">
+    <img src="/assets/images/goBravoLogo.png" alt="Logo go Bravo">
+  </div>
+  <div class="meanPB-whiteBox-title mb-4">Propuesta múltiple</div>
+  <div class="mb-4 text-center">Carga un documento .CSV de Máximo 8MB con el tipo y número de identificación de las personas a
+    consultar.</div>
+    <!-- <span class="mb-3 aun">
+      ¿Tienes dudas? <strong class="btn-multiple-proposal-consultation" (click)="openMultipleProposalExplication()">Click aquí </strong> para ver una explicación de la propuesta multiple
+    </span> -->
+
+    <div class="mb-3 aun" >¿Tienes dudas? <a (click)="openMultipleProposalExplication()" class="smallBlueTxt click">Click aquí</a>  para ver una explicación de la propuesta multiple</div>
+    <!-- <div class="mb-3 aun" >para ver una explicación de la propuesta multiple </div> -->
+
+  <app-file-upload [files]="files" [filesAccepted]="filesAccepted"></app-file-upload>
+  <!--Action Buttons-->
+
+  <button class="mean-PortalBtn sendFormbtn w-75" (click)="initTemplateBuild()">Enviar propuestas</button>
+
+  <!-- <div><a routerLink="/pb/kind-of-consultation" class="btn btn-outline-info p-3 px-5 rounded-pill">Volver a la pantalla anterior</a></div> -->
+<!-- 
+  <div>
+    <a class="smallBlueTxt btn btn-outline-info p-3 px-5 rounded-pill" routerLink="/pb/kind-of-consultation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <g clip-path="url(#clip0_774_398)">
+                <path d="M9 19L10.41 17.59L5.83 13H22V11H5.83L10.42 6.41L9 5L2 12L9 19Z" fill="currentColor"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_774_398">
+                    <rect width="24" height="24" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg>
+        <span class="button-text">Volver a la pantalla anterior</span>
+    </a>
+</div> -->
+
+<div>
+  <a class="smallBlueTxt btn btn-outline-info p-3 px-5 rounded-pill" routerLink="/pb/kind-of-consultation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g clip-path="url(#clip0_774_398)">
+              <path d="M9 19L10.41 17.59L5.83 13H22V11H5.83L10.42 6.41L9 5L2 12L9 19Z" fill="currentColor"/>
+          </g>
+          <defs>
+              <clipPath id="clip0_774_398">
+                  <rect width="24" height="24" fill="white"/>
+              </clipPath>
+          </defs>
+      </svg>
+      <span class="button-text">Volver a la pantalla anterior</span>
+  </a>
+</div>
+
+</div>

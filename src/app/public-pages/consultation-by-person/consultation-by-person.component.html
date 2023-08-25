@@ -1,0 +1,99 @@
+<div class="white-box-content">
+    <div class="logo-container">
+        <img src="/assets/images/goBravoLogo.png" alt="Logo go Bravo">
+    </div>
+    <div class="meanPB-whiteBox-title mb-3">Propuesta individual</div>
+    <div class="mb-3 text-center">Puedes consultar si una persona es cliente de Go Bravo y enviarnos una propuesta.</div>
+
+    <form [formGroup]="formoperation" class="w-100" (ngSubmit)="onSubmit()">
+        <div class="w-100" *ngIf="checkPolicies">
+            <!-- <mat-form-field class="w-100 mb-3" border-1 no-rounded-border appearance="fill" color="primary"> -->
+            <mat-form-field class="w-100 mb-3" border-1 no-rounded-border appearance="fill" color="primary">
+                <mat-label>Tipo de documento</mat-label>
+                <mat-select formControlName="typeDocument">
+                    <mat-option value="CC">
+                        Cédula de Ciudadanía
+                    </mat-option>
+                    <mat-option value="CE">
+                        Cédula de Extranjería
+                    </mat-option>
+                </mat-select>
+                <mat-error class="text-center" *ngIf="this.formoperation.controls.typeDocument.hasError('required')">
+                    Debe seleccionar el <strong>tipo de documento</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-3" border-1 no-rounded-border appearance="fill" color="primary">
+                <mat-label>Número de documento</mat-label>
+                <input type="text" matInput placeholder="Documento del dueño de la deuda, Ej. 100000000" formControlName="userId">
+                <mat-error class="text-center" *ngIf="this.formoperation.controls.userId.hasError('required')">
+                 <strong>requerido</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field *ngIf="!isUserLogged" class="w-100 mb-3" border-1 no-rounded-border appearance="fill" color="primary">
+                <mat-label>Entidad con la cual tiene la deuda</mat-label>
+                <input type="text" matInput placeholder="Ej. Bancolombia" formControlName="entity">
+                <mat-error class="text-center" *ngIf="this.formoperation.controls.entity.hasError('required')">
+                 <strong>requerida</strong>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field *ngIf="isUserLogged" appearance="fill" class="w-100 mb-3" color="primary">
+                <mat-label>Entidad con la cual tiene la deuda: </mat-label>
+                <mat-select name="selectEntity" [(ngModel)]="selectedEntity" formControlName="entity">
+                    <div *ngFor="let entity of entitiesList">
+                        <mat-option value={{entity}}>
+                            {{entity}}
+                        </mat-option>
+                    </div>                                                   
+                </mat-select>
+            </mat-form-field>
+            <mat-error *ngIf="errorVal"> {{errorText}}</mat-error>
+            <!-- <button class="mean-PortalBtn sendFormbtn" [disabled]="!this.formoperation.valid">Encontrar persona</button> -->
+            <div class="w-100 d-flex justify-content-center align-items-center">
+                <button class="mean-PortalBtn sendFormbtn" [disabled]="!this.formoperation.valid">Encontrar persona</button>
+            </div>
+        </div>
+
+        <!--Action Buttons-->
+        <div class="checkbox-container w-100" *ngIf="!checkPolicies">
+            <span>Antes de continuar debes aceptar nuestras politicas para el tratamiento de datos si estas de
+                acuerdo</span>
+            <mat-checkbox class="mb-2 checkbox-field w-100" formControlName="checkDataPolicy">
+                <span class="font-size-text">
+                    Acepto el <a href="https://resuelvetudeuda.com/es-co/tratamiento-de-datos-personales/"
+                        target="_blank">Tratamiento de
+                        Datos personales</a> <br>
+                        y las  <a href="https://resuelvetudeuda.com/es-co/politicas-para-el-tratamiento-de-la-informacion/"
+                        target="_blank"> Politicas de tratamiento de información</a>
+                </span>
+            </mat-checkbox>
+
+            <mat-checkbox class="mb-2" formControlName="checkConditions">Acepto el <a
+                    href="https://resuelvetudeuda.com/es-co/aviso-de-privacidad/" target="_blank">Aviso de
+                    Privacidad</a> y los
+                <a href="https://resuelvetudeuda.com/es-co/terminos-y-condiciones/" target="_blank">Términos y
+                    Condiciones</a>
+            </mat-checkbox>
+            <button class="mean-PortalBtn sendFormbtn"
+                [disabled]="!formoperation.controls.checkDataPolicy.value || !formoperation.controls.checkConditions.value"
+                (click)="checkPolicies = true">Continuar</button>
+        </div>
+    </form>
+    <!-- <div><a routerLink="/pb/kind-of-consultation" class="btn btn-outline-info p-3 px-5 rounded-pill">Volver a la pantalla anterior</a></div> -->
+
+    <div>
+        <a class="smallBlueTxt btn btn-outline-info p-3 px-5 rounded-pill" routerLink="/pb/kind-of-consultation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <g clip-path="url(#clip0_774_398)">
+                    <path d="M9 19L10.41 17.59L5.83 13H22V11H5.83L10.42 6.41L9 5L2 12L9 19Z" fill="currentColor"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_774_398">
+                        <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            <span class="button-text">Volver a la pantalla anterior</span>
+        </a>
+    </div>
+
+</div>

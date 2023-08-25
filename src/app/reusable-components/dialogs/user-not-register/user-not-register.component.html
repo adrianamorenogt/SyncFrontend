@@ -1,0 +1,27 @@
+<div class="white-box-content w-100 mt-1">
+    <button id="close" class="close-dialog-btn" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+    <span class="meanPB-whiteBox-title mb-4 text-center">¿Te gustaría ser aliado de Go Bravo?</span>
+    <div class="mb-4 w-75 text-center">Los aliados de Bravo son entidades que pueden usar todas las caracteristicas de
+        la plataforma.</div>
+    <div class="w-75 d-flex flex-column mt-1 meanPB-whiteBox-content">
+        <div class="w-100 d-flex flex-column align-items-center">
+            <strong class="w-100">Diligencia una encuesta:</strong>
+            <p class="mt-1">Si quieres ser parte de los aliados de Bravo puedes diligenciar una encuesta con el fin de
+                crear un usuario dentro de la plataforma, solo tomará 2 minutos y solo pediremos tus datos de contacto
+            </p>
+            <button type="submit" class="mean-PortalBtn sendFormbtn w-75" (click)="openForm()" mat-dialog-close>
+                Diligencia la encuesta
+            </button>
+        </div>
+        <div class="w-100 mt-1 d-flex flex-column align-items-center">
+            <strong class="w-100">Usa una caracteristica de la plataforma:</strong>
+            <p class="mt-1">Incluso sin usuario puedes usar una caracteristica de la plataforma con la cual
+                puedes enviarnos una propuesta para la negociación de deuda de uno de nuestros clientes, ¡Pruébalo!</p>
+            <button type="submit" class="mean-PortalBtn sendFormbtn w-75" (click)="route()" mat-dialog-close>
+                Enviar propuesta individual
+            </button>
+        </div>
+    </div>
+</div>

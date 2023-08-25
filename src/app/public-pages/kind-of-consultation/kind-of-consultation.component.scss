@@ -1,0 +1,179 @@
+@import 'variables';
+
+.bluePB-container {
+    max-height: 150px;
+    width: 100%;
+
+    border-radius: 8px;
+    background: var(--panel-purple-200, #D7D0F6);
+    color: #111233;
+    padding: 10px;
+    outline: none;
+    border: none;
+    text-align: start;
+    box-shadow: 8px 8px 0px 2px rgba(#EBE8FB, 1.0);
+    -moz-box-shadow: 8px 8px 0px 2px rgba(#EBE8FB, 1.0);
+    -webkit-box-shadow: 8px 8px 0px 2px rgba(#EBE8FB, 1.0);
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    .bluePB-title {
+        color: var(--panel-deep-purple-600, #111233);
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        @media (max-width: 575.98px) {
+            font-size: 14px;
+        }
+    }
+
+    .bluePB-subTitle {
+        color: var(--panel-deep-purple-600, #111233);
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        @media (max-width: 575.98px) {
+            font-size: 14px;
+        }
+    }
+
+    .mat-icon {
+        color: #111233;
+        height: 100%;
+        width: 100%;
+        font-size: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 575.98px) {
+            font-size: 40px;
+        }
+    }
+
+    mb-2 mb-md-4 {
+        color: #585866;
+    }
+}
+
+.change-password-label {
+    cursor: pointer;
+    text-decoration: underline;
+    color: $first-color;
+}
+
+::ng-deep .mat-form-field-flex {
+    border-radius: 8px !important;
+}
+
+// BIENVENID@
+
+.welcome-message {
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #111233;
+    font-size: 16px;
+}
+
+.user-name {
+    color: #585866;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+// AZUL GRADIENTE BOTON AZUL ESTATICO
+
+.mean-PortalBtn.fs-6.mb-2.mb-md-4.text-center.w-25 {
+    display: flex;
+    width: 100%;
+    max-width: 432px;
+    height: 48px;
+    padding: 12px 16px 11px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 24px;
+    border: 1px solid var(--panel-action-blue-500, #4BC9F4);
+    background: var(--panel-action-blue-500, #4BC9F4);
+    color: var(--panel-base-white, #FFF);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mean-PortalBtn.fs-6.mb-2.mb-md-4.text-center.w-25:hover {
+    background: var(--panel-gradient-sea, linear-gradient(90deg, #71F3F8 0%, #509EF9 65.10%, #71F3F8 100%));
+    color: var(--panel-base-white, #FFF);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+    .mean-PortalBtn.fs-6.mb-2.mb-md-4.text-center.w-25 {
+        max-width: none;
+        width: auto;
+        height: auto;
+        padding: 12px 24px;
+        font-size: 14px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+// Selecciona el tipo de propuesta que vas a presentar
+
+.mb-2.mb-md-4.text-center {
+    color: var(--panel-grey-300, #585866);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+// Cambiar contraseña
+
+.change-password-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #4BC9F4;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.change-password-label:hover {
+    color: transparent;
+    background: linear-gradient(90deg, rgba(4, 39, 104, 0.8) 0%, rgba(0, 119, 255, 0.8) 65.10%, rgba(15, 29, 109, 0.8) 100%), #FFF;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.05);
+}

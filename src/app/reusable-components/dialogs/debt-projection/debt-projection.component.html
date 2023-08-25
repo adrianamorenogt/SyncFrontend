@@ -1,0 +1,162 @@
+<div class="white-box-content">
+
+  <button id="close" class="close-dialog-btn" mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+  <div class="meanPB-whiteBox-title mb-1">Propuesta de cancelación de deuda</div>
+  <div class="mb-1 text-center">Diligencia la siguiente información para enviar tu propuesta de cancelación de deuda.
+  </div>
+  <mat-stepper linear orientation="horizontal" #stepper>
+    <mat-step [stepControl]="firstFormGroup" errorMessage="Debe completar todos los campos">
+      <ng-template matStepLabel>Información básica</ng-template>
+      <ng-template matStepContent>
+        <form [formGroup]="firstFormGroup">
+          <mat-form-field appearance="fill" class="w-100 mb-3" color="accent">
+            <mat-hint align="end"><strong>Monto por el cual se va a negociar la deuda.</strong> </mat-hint>
+            <mat-label>Monto de la deuda:</mat-label>
+            <input matInput type="number" formControlName="amount">
+            <mat-error class="text-center" *ngIf="this.firstFormGroup.controls.amount.hasError('required')">
+              Monto es <strong>requerido</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="w-100 mb-3" color="accent">
+            <mat-label>Referencia de la deuda:</mat-label>
+            <input matInput type="text" formControlName="reference">
+            <mat-error class="text-center" *ngIf="this.firstFormGroup.controls.reference.hasError('required')">
+              Referencia es <strong>requerida</strong>
+            </mat-error>
+            <mat-hint align="end"><strong>En caso de conocer la referencia de la deuda, ingresela en este
+                campo.</strong> </mat-hint>
+          </mat-form-field>
+          <mat-form-field *ngIf="isUserLogged" appearance="fill" class="w-100 mb-3" color="accent">
+            <mat-label>Casa de cobranza que hace la propuesta:</mat-label>
+            <mat-select formControlName="bank">
+              <div *ngFor="let bank of banks">
+                <mat-option value={{bank}}>
+                  {{bank}}
+                </mat-option>
+              </div>
+            </mat-select>
+            <mat-error class="text-center" *ngIf="this.firstFormGroup.controls.bank.hasError('required')">
+              La casa de cobranza o agencia es <strong>requerida</strong>
+            </mat-error>
+            <mat-hint align="end">
+              <strong>
+                Seleccione la cada de cobranza a la cual pertenece o con la cual el cliente tiene la deuda.
+              </strong>
+            </mat-hint>
+          </mat-form-field>
+
+          <mat-form-field *ngIf="!isUserLogged" appearance="fill" class="w-100 mb-3" color="accent">
+            <mat-label>Casa de cobro o entidad a la que pertenece:</mat-label>
+            <input matInput type="text" formControlName="bank">
+            <mat-error class="text-center" *ngIf="this.firstFormGroup.controls.bank.hasError('required')">
+              Agencia es <strong>requerida</strong>
+            </mat-error>
+            <mat-hint align="end">
+              <strong>
+                Ingrese la agencia a la cual pertenece o con la cual el cliente tiene la deuda.
+              </strong>
+            </mat-hint>
+          </mat-form-field>
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <button matStepperNext class="mean-PortalBtn w-50 nextControlButton"
+              [disabled]="!this.firstFormGroup.valid">Siguiente</button>
+          </div>
+        </form>
+      </ng-template>
+    </mat-step>
+    <mat-step *ngIf="!isUserLogged" [stepControl]="secondFormGroup">
+      <ng-template matStepLabel>Información de acreedor</ng-template>
+      <ng-template matStepContent>
+        <form [formGroup]="secondFormGroup">
+          <p class="mb-3">Ingresa esta información para ponernos en contacto contigo:</p>
+          <mat-form-field appearance="fill" class="w-100 mb-3" color="accent">
+            <mat-label>Nombre Completo:</mat-label>
+            <input matInput type="text" formControlName="assessorName">
+            <mat-error class="text-center" *ngIf="this.secondFormGroup.controls.assessorName.hasError('required')">
+              Nombre es <strong>requerido</strong>
+            </mat-error>
+            <mat-hint align="end">
+              <strong>
+                Nombre de la persona que esta haciendo la propuesta
+              </strong>
+            </mat-hint>
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="w-100 mb-3" color="accent">
+            <mat-label>Correo electronico:</mat-label>
+            <input matInput type="email" formControlName="assesorEmail">
+            <mat-error class="text-center" *ngIf="this.secondFormGroup.controls.assesorEmail.hasError('required')">
+              Correo es <strong>requerido</strong>
+            </mat-error>
+            <mat-hint align="end">
+              <strong>
+                Correo electronico con el cual podremos ponernos en contacto con usted.
+              </strong>
+            </mat-hint>
+          </mat-form-field>
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <button matStepperNext class="mean-PortalBtn w-50 nextControlButton"
+              [disabled]="!this.secondFormGroup.valid">Siguiente</button>
+            <button class="smallGreenbtn w-50" matStepperPrevious>Volver</button>
+          </div>
+        </form>
+
+      </ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Descripción (Opcional)</ng-template>
+      <ng-template matStepContent>
+        <form [formGroup]="secondFormGroup">
+          <p class="custom-paragraph">Si consideras que la propuesta necesita mas detalle, escribe en este espacio los detalles.</p>
+          <mat-form-field class="w-100" appearance="fill" color="accent">
+            <mat-label>Descripción...</mat-label>
+            <textarea rows="10" matInput placeholder="Ej. Se propone pagar el 20% de la deuda en un plazo..."
+              formControlName="description"></textarea>
+          </mat-form-field>
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <button matStepperNext class="mean-PortalBtn sendFormbtn w-75">Siguiente</button>
+
+            <button class="white-box-content-btn btn btn-outline-info p-3 px-5 rounded-pill" matStepperPrevious>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <g clip-path="url(#clip0_774_398)">
+                      <path d="M9 19L10.41 17.59L5.83 13H22V11H5.83L10.42 6.41L9 5L2 12L9 19Z" fill="currentColor"/>
+                  </g>
+                  <defs>
+                      <clipPath id="clip0_774_398">
+                          <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                  </defs>
+              </svg>
+              <span class="white-box-content-button-text">Volver</span>
+            </button>          </div>
+        </form>
+      </ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel state="">Adjunto (Opcional)</ng-template>
+      <p class="custom-paragraph-PDF">
+        Si cuentas con un documento en PDF, puedes subirlo para dar más detalle de la propuesta.
+        <strong>Debe ser de máximo 8MB</strong>
+      </p>      
+      <app-file-upload [files]="files" [filesAccepted]="filesAccepted"></app-file-upload>
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <mat-error *ngIf="errorVal"> {{errorText}}</mat-error>
+        <button class="mean-PortalBtn w-50" (click)="initTemplateBuild()">Enviar propuesta</button>
+      <button class="white-box-content-btn btn btn-outline-info p-3 px-5 rounded-pill" matStepperPrevious>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <g clip-path="url(#clip0_774_398)">
+                <path d="M9 19L10.41 17.59L5.83 13H22V11H5.83L10.42 6.41L9 5L2 12L9 19Z" fill="currentColor"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_774_398">
+                    <rect width="24" height="24" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg>
+        <span class="white-box-content-button-text">Volver</span>
+      </button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</div>

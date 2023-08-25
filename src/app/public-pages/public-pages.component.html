@@ -1,0 +1,45 @@
+<body>
+    <div class="container-cstm">
+        <div class="container-v">
+            <div class="row mx-auto">
+                <div class="col-lg-7 order-lg-last">
+                    <div class="meanPB-whiteBox-container">
+                        <div class="meanPB-whiteBox">
+                            <!-- <button class="exitPB-btn" *ngIf="this.isConnected == true" (click)="onLogout()">
+                                <span class="safePB-exitTXT">Cerrar Sesión</span>
+                                <mat-icon>exit_to_app</mat-icon>
+                            </button> -->
+                            <button class="exitPB-btn" *ngIf="isConnected == true" (click)="onLogout()">
+                                <span class="safePB-exitTXT">Cerrar Sesión</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="exit-icon">
+                                    <g clip-path="url(#clip0_774_980)">
+                                        <path d="M17 7L15.59 8.41L18.17 11H8V13H18.17L15.59 15.58L17 17L22 12L17 7ZM4 5H12V3H4C2.9 3 2 3.9 2 5V19C2 20.1 2.9 21 4 21H12V19H4V5Z" fill="currentColor"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_774_980">
+                                            <rect width="24" height="24" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>                                                   
+                            <!--  -->
+                            <div class="principalContainer">
+                                <router-outlet></router-outlet>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="meanPB-titleText">
+                        <div class="logo-V">
+                            <img src="/assets/images/logoV.png" alt="Logo Go Bravo">
+                        </div>
+                        <div class="blueHTitle">AYUDAMOS A</div>
+                        <div class="changeLifes-title">CAMBIAR VIDAS</div>
+                        <div class="findHappyP-text">Damos segundas oportunidades</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

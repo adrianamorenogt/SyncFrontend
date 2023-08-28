@@ -37,16 +37,16 @@
 }
 
 .mb-3.forgot-password-label-custom {
-    font-family: Montserrat!important;
-    font-size: 16px!important;
-    font-style: normal!important;
-    font-weight: 600!important;
-    line-height: normal!important;
-    display: inline-flex!important;
-    align-items: center!important;
-    gap: 8px!important;
-    color: #4BC9F4!important;
-    cursor: pointer!important;
+    font-family: Montserrat !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: normal !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    color: #4BC9F4 !important;
+    cursor: pointer !important;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -125,24 +125,25 @@
 
 /* Efecto hover */
 .white-box-content a.btn.btn-outline-info:hover {
-    color: #ffffff !important;
-    background: var(--panel-gradient-sea, linear-gradient(90deg, #71F3F8 0%, #509EF9 65.10%, #71F3F8 100%));
+    color: #327894 !important;
+    // background: var(--panel-gradient-sea, linear-gradient(90deg, #71f4f866 0%, #509ff92c 65.10%, #71f4f83e 100%));
+
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     transform: scale(1.05);
-    border: none;
+    // border: none;
 }
 
-.white-box-content a.btn.btn-outline-info:hover .button-text {
-    color: #ffffff !important;
-}
+// .white-box-content a.btn.btn-outline-info:hover .button-text {
+//     color: #ffffff !important;
+// }
 
-.white-box-content a.btn.btn-outline-info:hover svg path {
-    fill: var(--panel-base-white, #FFF);
-}
+// .white-box-content a.btn.btn-outline-info:hover svg path {
+//     fill: var(--panel-base-white, #FFF);
+// }
 
 // Bóton de inicio de sesión
 
-.mean-PortalBtn.sendFormbtn {
+.sendFormbtn {
     display: flex;
     width: 100%;
     max-width: 432px;
@@ -164,17 +165,24 @@
     line-height: normal;
     /* Transiciones */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        background: var(--panel-gradient-sea, linear-gradient(90deg, #71F3F8 0%, #509EF9 65.10%, #71F3F8 100%));
+        color: var(--panel-base-white, #FFF);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+        transform: scale(1.05);
+    }
 }
 
-.mean-PortalBtn.sendFormbtn:hover {
-    background: var(--panel-gradient-sea, linear-gradient(90deg, #71F3F8 0%, #509EF9 65.10%, #71F3F8 100%));
-    color: var(--panel-base-white, #FFF);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-    transform: scale(1.05);
-}
+// .mean-PortalBtn.sendFormbtn:hover {
+//     background: var(--panel-gradient-sea, linear-gradient(90deg, #71F3F8 0%, #509EF9 65.10%, #71F3F8 100%));
+//     color: var(--panel-base-white, #FFF);
+//     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+//     transform: scale(1.05);
+// }
 
 @media (max-width: 767px) {
-    .mean-PortalBtn.sendFormbtn {
+    .sendFormbtn {
         max-width: none;
         width: auto;
         height: auto;
@@ -186,5 +194,3 @@
         margin-bottom: 40px;
     }
 }
-
- 

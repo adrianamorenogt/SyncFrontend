@@ -6,7 +6,7 @@
     <div class="mb-2 mb-md-4 text-center">
         <span class="welcome-message">Bienvenid@</span><br>
         <span class="user-name">{{this.cookieService.get("UserName")}}</span>
-    </div>    
+    </div>
     <div class="d-flex flex-row w-100">
         <mat-form-field appearance="fill" class="w-100 mb-3" color="accent">
             <mat-label>Descarga nuestra base de clientes de: </mat-label>
@@ -18,7 +18,8 @@
                 </div>
             </mat-select>
         </mat-form-field>
-        <button class="mean-PortalBtn fs-6 mb-2 mb-md-4 text-center w-25" (click)="downloadActiveClientsBase()">Descargar</button>
+        <button class="mean-PortalBtn fs-6 mb-2 mb-md-4 text-center w-25"
+            (click)="downloadActiveClientsBase()">Descargar</button>
     </div>
     <div class="mb-2 mb-md-4 text-center">Selecciona el tipo de propuesta que vas a presentar</div>
     <button routerLink="/pb/consultation-by-person" class="bluePB-container mb-4">
@@ -28,7 +29,8 @@
             </div>
             <div class="col-sm-9">
                 <div class="bluePB-title">Propuesta individual</div>
-                <div class="bluePB-subTitle">Opción para enviar una propuesta para uno de nuestros clientes.</div>
+                <div class="bluePB-subTitle">Opción para enviar una propuesta para uno de nuestros
+                    clientes.</div>
             </div>
         </div>
     </button>
@@ -40,11 +42,13 @@
             </div>
             <div class="col-sm-9">
                 <div class="bluePB-title">Propuesta multiple</div>
-                <div class="bluePB-subTitle">Opción para enviar varias propuestas al mismo tiempo para varios de
+                <div class="bluePB-subTitle">Opción para enviar varias propuestas al mismo tiempo
+                    para varios de
                     nuestros clientes usando un archivo tipo CSV.</div>
             </div>
         </div>
     </button>
 
-    <div class="mt-4 change-password-label" (click)="openChangePasswordDialog()">Cambiar contraseña</div>
+    <div class="mt-4 change-password-label" (click)="openChangePasswordDialog()">Cambiar contraseña
+    </div>
 </div>

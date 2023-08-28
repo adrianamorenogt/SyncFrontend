@@ -18,26 +18,26 @@ const routes: Routes = [
     {
         path: 'pb',
         component: PublicPagesComponent,
-            children: [
-                {
-                    path: '',
-                    redirectTo: 'home',
-                    pathMatch: 'full'
-                },
-                { path: 'home', component: HomeComponent, data: {titulo: ''}},
-                { path: 'client-consultation', component: ClientIndividualConsultationComponent, data:{titulo:''}},
-                { path: 'log-in-for-consultation', component: LogInForConsultationComponent, data: { titulo: '' }},
-                { path: 'kind-of-consultation', component: KindOfConsultationComponent, canActivate: [AuthGuard], data: { titulo: '' }},
-                { path: 'consultation-by-person', component: ConsultationByPersonComponent, data: { titulo: '' }},
-                { path: 'not-found-person', component: NotFoundPersonComponent, data: { titulo: '' }},
-                { path: 'found-person', component: FoundPersonComponent, data: { titulo: '' }},
-                { path: 'multiple-consultation', component: MultipleConsultationComponent, canActivate: [AuthGuard], data: { titulo: '' }},
-                { path: 'multiple-consultation-generated', component: MultipleConsultationGeneratedComponent, data: { titulo: '' }},
-                { path: 'proposal-received', component: ProposalReceivedComponent, data: { titulo: '' }},
-            ],
+        children: [
+            {
+                path: '',
+                redirectTo: 'home',
+                pathMatch: 'full'
+            },
+            { path: 'home', component: HomeComponent, data: { titulo: '' } },
+            { path: 'client-consultation', component: ClientIndividualConsultationComponent, data: { titulo: '' } },
+            { path: 'log-in-for-consultation', component: LogInForConsultationComponent, data: { titulo: '' } },
+            { path: 'kind-of-consultation', component: KindOfConsultationComponent, canActivate: [AuthGuard], data: { titulo: '' } },
+            { path: 'consultation-by-person', component: ConsultationByPersonComponent, data: { titulo: '' } },
+            { path: 'not-found-person', component: NotFoundPersonComponent, data: { titulo: '' } },
+            { path: 'found-person', component: FoundPersonComponent, data: { titulo: '' } },
+            { path: 'multiple-consultation', component: MultipleConsultationComponent, canActivate: [AuthGuard], data: { titulo: '' } },
+            { path: 'multiple-consultation-generated', component: MultipleConsultationGeneratedComponent, data: { titulo: '' } },
+            { path: 'proposal-received', component: ProposalReceivedComponent, data: { titulo: '' } },
+        ],
     },
-    
+
 ];
 
 
-export const PublicPagesRoutes = RouterModule.forChild(routes); {}
+export const PublicPagesRoutes = RouterModule.forChild(routes); { }

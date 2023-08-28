@@ -1,20 +1,30 @@
 <div class="white-box-content">
     <div class="logo-container">
-        <img src="/assets/images/solve-your-debt-logo.png" alt="Logo resulve tu deuda">
+        <img src="/assets/images/goBravoLogo.png" alt="Logo Go Bravo">
     </div>
 
     <div class="notFoundperosn-imgContainer">
         <img src="/assets/images/found-person-img.png" alt="Icono, error persona no encontrada">
     </div>
 
-    <div class="meanPB-whiteBox-title mb-4">PROPUESTA MULTIPLE RECIBIDA</div>
-    <div class="mb-4">Hemos recibido tu propuesta y generado el siguiente documento con la información de quiénes se encuentran y quiénes no se encuentran en nuestra base de datos.</div>
+    <div class="pageDarkTitle mb-3">Propuesta múltple recibida</div>
+    <div class="mb-4 lightgrayText text-center">Hemos recibido tu propuesta y generado el siguiente
+        documento
+        con la
+        información de quiénes se encuentran y quiénes no se encuentran en nuestra base de datos
+    </div>
 
-    
-    <button class="blueBorder-btn mb-4" (click)="clickDownload()">Descargar documento</button>
-    <button class="blueBorder-btn mb-4" (click)="clickDownloadAuthorityLetter()">Descargar Cartas Poder</button>
-            
+
+    <button class="mainOutlineButton mb-3 justify-content-center"
+        (click)="clickDownload()">Descargar
+        documento</button>
+    <button class="mainOutlineButton mb-4 justify-content-center"
+        (click)="clickDownloadAuthorityLetter()">Descargar Cartas
+        Poder</button>
+
     <!--Action Buttons-->
-    <button routerLink="/pb/kind-of-consultation" class="mean-PortalBtn">Nueva propuesta</button>
+    <button routerLink="/pb/kind-of-consultation"
+        class="mainSolidButton mb-4 justify-content-center">Nueva
+        propuesta</button>
     <div><a routerLink="/pb/log-in-for-consultation" class="smallBlueTxt">Salida segura</a></div>
 </div>

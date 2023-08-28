@@ -11,7 +11,7 @@ import { PublicPagesRoutes } from './public-pages.routes';
 import { MaterialModule } from '../material/material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { PublicPagesComponent } from './public-pages.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { ProposalReceivedComponent } from './proposal-received/proposal-received.component';
@@ -33,9 +33,9 @@ import { ClientIndividualConsultationComponent } from './client-individual-consu
         ProposalReceivedComponent,
         HomeComponent,
         ClientIndividualConsultationComponent,
-        
+
     ],
-    imports: [ 
+    imports: [
         CommonModule,
         PublicPagesRoutes,
         MaterialModule,
@@ -44,9 +44,9 @@ import { ClientIndividualConsultationComponent } from './client-individual-consu
         ReactiveFormsModule,
         FormsModule,
         ReusableComponentsModule
-        
+
     ],
     exports: [],
     providers: [CookieService],
 })
-export class PublicPagesModule {}
+export class PublicPagesModule { }

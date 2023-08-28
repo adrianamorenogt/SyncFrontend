@@ -13,12 +13,12 @@ import { ProposalService } from 'src/app/services/proposal.service';
 })
 export class MultipleConsultationGeneratedComponent implements OnInit {
 
-  constructor(public userGlobal: UserGlobal,public titleService:Title,
-    private serviceProposal:ProposalService,
+  constructor(public userGlobal: UserGlobal, public titleService: Title,
+    private serviceProposal: ProposalService,
     private _snackBar: MatSnackBar,
     private cookieService: CookieService) {
     this.titleService.setTitle("Acreedor - Propuesta multiple recibida");
-   }
+  }
 
   ngOnInit(): void {
   }
@@ -37,14 +37,14 @@ export class MultipleConsultationGeneratedComponent implements OnInit {
     req.fileName = "File";
     req.fileExtention = "csv";
     req.emailSended = this.cookieService.get("Email");
-    this.serviceProposal.getAuthorityLetters(req).subscribe(Resp =>{
+    this.serviceProposal.getAuthorityLetters(req).subscribe(Resp => {
       console.log(Resp);
-       if(Resp.operationCode !== 200){
-        this.openSnackBar(Resp.operationMsg,"Aceptar")
-       }
-       else{
-        this.openSnackBar("Enviaremos la petición a tu correo en cuanto esté listo, puede tardar unos minutos","Aceptar")
-       }
+      if (Resp.operationCode !== 200) {
+        this.openSnackBar(Resp.operationMsg, "Aceptar")
+      }
+      else {
+        this.openSnackBar("Enviaremos la petición a tu correo en cuanto esté listo, puede tardar unos minutos", "Aceptar")
+      }
     });
   }
 

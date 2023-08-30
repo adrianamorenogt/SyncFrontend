@@ -1,10 +1,10 @@
 .meanPB-whiteBox-title.mb-3 {
     color: #111233;
     text-align: center;
-    font-family: Monserrat;
+    font-family: Monserrat !important;
     font-size: 30px;
     font-style: normal;
-    font-weight: 900;
+    font-weight: 700;
     line-height: normal;
 }
 
@@ -24,7 +24,7 @@
     background: var(--panel-action-blue-500, #4BC9F4);
     color: var(--panel-base-white, #FFF);
     text-align: center;
-    font-family: Montserrat;
+    font-family: Montserrat !important;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -44,7 +44,7 @@
 .lightgrayText {
     color: var(--panel-grey-300, #585866);
     text-align: center;
-    font-family: Monserrat;
+    font-family: Monserrat !important;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -60,7 +60,7 @@
 .white-box-content a.btn.btn-outline-info {
     color: var(--panel-action-blue-500, #4BC9F4);
     text-align: center;
-    font-family: Montserrat;
+    font-family: Montserrat !important;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;

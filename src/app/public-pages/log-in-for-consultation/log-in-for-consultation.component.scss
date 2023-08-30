@@ -15,17 +15,17 @@
 .meanPB-whiteBox-title.mb-4 {
     color: #111233;
     text-align: center;
-    font-family: Monserrat;
+    // font-family: Monserrat !important;
     font-size: 30px;
     font-style: normal;
-    font-weight: 900;
+    font-weight: 700;
     line-height: normal;
 }
 
 .mb-4.text-center {
     color: #585866;
     text-align: center;
-    font-family: Monserrat;
+    // font-family: Monserrat !important;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
@@ -62,7 +62,7 @@
 .aun {
     color: #585866;
     text-align: center;
-    font-family: Montserrat;
+    font-family: Montserrat !important;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -74,7 +74,7 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-family: Montserrat;
+    font-family: Montserrat !important;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -100,7 +100,7 @@
 .white-box-content a.btn.btn-outline-info {
     color: var(--panel-action-blue-500, #4BC9F4);
     text-align: center;
-    font-family: Montserrat;
+    font-family: Montserrat !important;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -158,7 +158,7 @@
     background: var(--panel-action-blue-500, #4BC9F4);
     color: var(--panel-base-white, #FFF);
     text-align: center;
-    font-family: Montserrat;
+    font-family: Montserrat !important;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;

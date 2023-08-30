@@ -129,7 +129,7 @@ body{
         background: var(--panel-gradient-sea, linear-gradient(90deg, #71F3F8 0%, #509EF9 65.10%, #71F3F8 100%));        width: fit-content;
         color: var(--panel-base-white, #FFF);
         text-align: center;
-        font-family: Montserrat;
+        font-family: Montserrat !important;
         font-size: 49px;
         font-style: normal;
         font-weight: 700;
@@ -211,7 +211,7 @@ body{
 /* Estilos para el botón "Cerrar Sesión" */
 .exitPB-btn {
     text-align: center;
-    font-family: Montserrat;
+    font-family: Montserrat !important;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;

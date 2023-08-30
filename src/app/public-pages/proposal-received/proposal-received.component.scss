@@ -1,9 +1,9 @@
 @import 'variables';
 
-.lightgrayText {
+.lightgrayText1 {
   color: var(--panel-grey-300, #585866);
   text-align: center;
-  font-family: Monserrat;
+  // font-family: Monserrat !important;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -14,10 +14,10 @@
 .white-box-content .meanPB-whiteBox-title {
   color: #111233;
   text-align: center;
-  font-family: Monserrat;
+  // font-family: Monserrat !important;
   font-size: 32px;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 700;
   line-height: normal;
   // margin-top: 50px;
 }
@@ -37,7 +37,7 @@
   background: var(--panel-action-blue-500, #4BC9F4);
   color: var(--panel-base-white, #FFF);
   text-align: center;
-  font-family: Montserrat;
+  font-family: Montserrat !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -57,7 +57,7 @@
 .smallBlueTxt {
   color: #4BC9F4;
   text-align: center;
-  font-family: Montserrat;
+  font-family: Montserrat !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;

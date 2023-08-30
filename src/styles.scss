@@ -10,7 +10,7 @@
     max-width: 432px;
     height: 48px;
     padding: 12px 16px 11px 16px;
-    font-family: Montserrat;
+    font-family: Montserrat !important;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -47,7 +47,7 @@
     background: var(--panel-action-blue-500, #4BC9F4);
     color: var(--panel-base-white, #FFF);
     text-align: center;
-    font-family: Montserrat;
+    font-family: Montserrat !important;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -67,7 +67,7 @@
 .lightgrayText {
     color: var(--panel-grey-300, #585866);
     text-align: center;
-    font-family: Monserrat;
+    font-family: Monserrat !important;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -77,10 +77,10 @@
 .pageDarkTitle {
     color: #111233;
     text-align: center;
-    font-family: Monserrat;
+    font-family: Monserrat !important;
     font-size: 25px;
     font-style: normal;
-    font-weight: 900;
+    font-weight: 700;
     line-height: normal;
 }
 
@@ -172,8 +172,8 @@ body.bg-cstmLogin {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Monserrat, sans-serif;
-    font-weight: 900;
+    font-family: Monserrat !important;
+    font-weight: 700;
     height: 60px;
     line-height: 18px;
     text-decoration: none;

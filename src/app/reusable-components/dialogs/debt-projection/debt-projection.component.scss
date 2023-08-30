@@ -16,7 +16,7 @@
 .custom-paragraph {
   color: var(--panel-grey-300, #585866);
   text-align: center;
-  font-family: Montserrat;
+  font-family: Montserrat !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -26,7 +26,7 @@
 .custom-paragraph-PDF {
   color: var(--panel-grey-300, #585866);
   text-align: center;
-  font-family: Montserrat;
+  font-family: Montserrat !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -56,7 +56,7 @@
 .mat-step-header .mat-step-label {
   color: var(--panel-turquoise-600, #71F3F8);
   text-align: center;
-  font-family: Montserrat;
+  font-family: Montserrat !important;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -76,7 +76,7 @@
 .meanPB-whiteBox-title {
   color: var(--panel-deep-purple-600, #111233);
   text-align: center;
-  font-family: Montserrat;
+  font-family: Montserrat !important;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -88,7 +88,7 @@
 .mb-1.text-center {
   color: var(--panel-grey-300, #585866);
   text-align: center;
-  font-family: Montserrat;
+  font-family: Montserrat !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -109,7 +109,7 @@
   background-color: #2F2F6D !important;
   color: var(--panel-turquoise-600, #71F3F8);
   text-align: center;
-  font-family: Montserrat;
+  font-family: Montserrat !important;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -151,7 +151,7 @@
   background: var(--panel-action-blue-500, #4BC9F4);
   color: var(--panel-base-white, #FFF);
   text-align: center;
-  font-family: Montserrat;
+  font-family: Montserrat !important; 
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -199,7 +199,7 @@
 .white-box-content-btn {
   color: var(--panel-action-blue-500, #4BC9F4);
   text-align: center;
-  font-family: Montserrat;
+  font-family: Montserrat !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -241,7 +241,7 @@
 
 /* Ajusta los estilos del texto si es necesario */
 .white-box-content-button-text {
-  font-family: Montserrat;
+  font-family: Montserrat !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;

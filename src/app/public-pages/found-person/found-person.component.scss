@@ -1,24 +1,24 @@
 .label {
   color: red;
   padding: 8px;
-  font-family: 'Montserrat';
-  font-family: Montserrat;
+  font-family: 'Montserrat' !important;
+  font-family: Montserrat !important;
 }
 
 .meanPB-whiteBox-title.mb-3 {
   color: #111233;
   text-align: center;
-  font-family: Monserrat;
+  // font-family: Monserrat !important;
   font-size: 30px;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 700;
   line-height: normal;
 }
 
 .mb-3 {
   color: #585866;
   text-align: center;
-  font-family: Monserrat;
+  // font-family: Monserrat !important;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -44,7 +44,7 @@
   border: 1px solid var(--panel-action-blue-500, #4BC9F4);
   background: var(--panel-base-white, #FFF);
   color: var(--panel-action-blue-500, #4BC9F4);
-  font-family: Montserrat;
+  font-family: Montserrat !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -65,7 +65,7 @@
 .white-box-content a.btn.btn-outline-info {
   color: var(--panel-action-blue-500, #4BC9F4);
   text-align: center;
-  font-family: Montserrat;
+  font-family: Montserrat !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
